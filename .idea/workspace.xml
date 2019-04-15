@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf42079e-d0c9-479a-b75c-d05c42752b5a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/gym_traffic_vot/tests/run.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym_traffic_vot/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/gym_traffic_vot/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gym_traffic_vot/envs/simple/out.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gym_traffic_vot/envs/simple/out.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym_traffic_vot/envs/traffic_env.py" beforeDir="false" afterPath="$PROJECT_DIR$/gym_traffic_vot/envs/traffic_env.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gym_traffic_vot/envs/traffic_vot.py" beforeDir="false" afterPath="$PROJECT_DIR$/gym_traffic_vot/envs/traffic_vot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gym_traffic_vot/tests/agent_tester.py" beforeDir="false" afterPath="$PROJECT_DIR$/gym_traffic_vot/tests/agent_tester.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gym_traffic_vot/tests/simple_tester.py" beforeDir="false" afterPath="$PROJECT_DIR$/gym_traffic_vot/tests/simple_tester.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gym_traffic_vot/tests/tmp.rou.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gym_traffic_vot/tests/tmp.rou.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,22 +18,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gym_traffic_vot/envs/simple/traffic.net.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1311" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gym_traffic_vot/envs/simple/traffic.nod.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gym_traffic_vot/envs/traffic_lights.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
-              <caret line="32" column="22" lean-forward="true" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+              <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -42,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gym_traffic_vot/envs/traffic_vot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="54" column="35" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
+            <state relative-caret-position="303">
+              <caret line="125" column="62" lean-forward="true" selection-start-line="125" selection-start-column="62" selection-end-line="125" selection-end-column="62" />
               <folding>
                 <element signature="e#0#55#0" expanded="true" />
               </folding>
@@ -52,17 +39,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gym_traffic_vot/envs/simple/traffic.add.xml">
+        <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/Lib/site-packages/pyglet/image/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-228" />
+            <state relative-caret-position="90">
+              <caret line="1026" selection-start-line="1026" selection-end-line="1026" />
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gym_traffic_vot/envs/simple/traffic_simple.py">
+        <entry file="file://C:/Program Files (x86)/Eclipse/Sumo/tools/traci/connection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="81">
+              <caret line="74" selection-start-line="74" selection-end-line="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://C:/Program Files (x86)/Eclipse/Sumo/tools/traci/constants.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="799" column="26" selection-start-line="799" selection-end-line="799" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -70,8 +68,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gym_traffic_vot/envs/traffic_env.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
+            <state relative-caret-position="873">
+              <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -82,8 +80,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gym_traffic_vot/tests/simple_tester.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+            <state relative-caret-position="95">
+              <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -92,15 +90,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gym_traffic_vot/envs/simple/view.settings.xml">
+        <entry file="file://$PROJECT_DIR$/gym_traffic_vot/tests/__init__.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gym_traffic_vot/envs/simple/traffic.rou.xml">
+        <entry file="file://$PROJECT_DIR$/gym_traffic_vot/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="95">
-              <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+              <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -133,6 +140,7 @@
       <find>mean</find>
       <find>episodes</find>
       <find>traff</find>
+      <find>get: simul</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -148,9 +156,9 @@
         <option value="$PROJECT_DIR$/gym_traffic_vot/envs/simple/__init__.py" />
         <option value="$PROJECT_DIR$/../gym-traffic/gym_traffic/envs/traffic_env.py" />
         <option value="$PROJECT_DIR$/gym_traffic_vot/envs/simple/traffic_simple.py" />
-        <option value="$PROJECT_DIR$/gym_traffic_vot/__init__.py" />
         <option value="$PROJECT_DIR$/gym_traffic_vot/tests/agent_tester.py" />
         <option value="$PROJECT_DIR$/gym_traffic_vot/tests/run.py" />
+        <option value="$PROJECT_DIR$/gym_traffic_vot/__init__.py" />
         <option value="$PROJECT_DIR$/gym_traffic_vot/envs/traffic_env.py" />
         <option value="$PROJECT_DIR$/gym_traffic_vot/envs/traffic_vot.py" />
         <option value="$PROJECT_DIR$/gym_traffic_vot/tests/simple_tester.py" />
@@ -208,7 +216,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/gym_traffic_vot/tests/run.py" />
-    <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -246,7 +254,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.run_vot_test">
+  <component name="RunManager" selected="Python.simple_tester">
     <configuration name="run_cart" type="PythonConfigurationType" factoryName="Python">
       <module name="gym-traffic-vot" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -323,7 +331,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gym_traffic_vot/tests/run.py" />
-      <option name="PARAMETERS" value="--alg=deepq --env=traffic-vot-simple-v0 --num_timesteps=0 --load_path=$PROJECT_DIR$/models/taffic_1M_deepq --play" />
+      <option name="PARAMETERS" value="--alg=deepq --env=traffic-vot-simple-gui-v0 --num_timesteps=0 --load_path=$PROJECT_DIR$/models/taffic_1M_deepq --play" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -401,15 +409,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-7" y="-7" width="2575" height="1415" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21246007" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.105055295" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3280943" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31827113" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.13181448" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39685658" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -426,14 +434,14 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/gym_traffic_vot/envs/traffic_vot.py</url>
-          <line>134</line>
+          <line>135</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/gym_traffic_vot/envs/traffic_vot.py</url>
-          <line>144</line>
+          <line>145</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
@@ -441,6 +449,11 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>[self.vehicles_vot[v] for v in traci.lane.getSubscriptionResults(lane)[tc.LAST_STEP_VEHICLE_ID_LIST]]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>observation</expression-string>
         <language-id>Python</language-id>
@@ -481,11 +494,6 @@
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>self.vehicles_vot</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
@@ -494,13 +502,6 @@
         <state split_layout="SPLIT">
           <first_editor />
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -523,9 +524,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gym_traffic_vot/tests/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/Lib/site-packages/scipy/stats/_distn_infrastructure.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -553,20 +551,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="14117">
           <caret line="759" column="13" selection-start-line="759" selection-start-column="8" selection-end-line="759" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files (x86)/Eclipse/Sumo/tools/traci/constants.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9348">
-          <caret line="492" selection-start-line="492" selection-end-line="492" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gym_traffic_vot/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="29" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -687,34 +671,72 @@
     <entry file="file://$PROJECT_DIR$/gym_traffic_vot/envs/traffic_lights.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
-          <caret line="32" column="22" lean-forward="true" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gym_traffic_vot/envs/traffic_vot.py">
+    <entry file="file://$PROJECT_DIR$/gym_traffic_vot/tests/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="54" column="35" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="95">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gym_traffic_vot/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gym_traffic_vot/envs/traffic_env.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
+        <state relative-caret-position="873">
+          <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/Program Files (x86)/Eclipse/Sumo/tools/traci/constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="799" column="26" selection-start-line="799" selection-end-line="799" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/Lib/site-packages/pyglet/image/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="1026" selection-start-line="1026" selection-end-line="1026" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files (x86)/Eclipse/Sumo/tools/traci/connection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gym_traffic_vot/envs/traffic_vot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="125" column="62" lean-forward="true" selection-start-line="125" selection-start-column="62" selection-end-line="125" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gym_traffic_vot/tests/simple_tester.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+        <state relative-caret-position="95">
+          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

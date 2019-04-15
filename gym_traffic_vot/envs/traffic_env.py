@@ -52,6 +52,7 @@ class TrafficEnv(Env):
         self.exit_loops = exitloops
         self.lights = lights
         self.start_sumo()
+        self.viewer = None
 
     def relative_path(self, *paths):
         os.path.join(os.path.dirname(__file__), *paths)

@@ -70,7 +70,7 @@ class TrafficVot(TrafficEnv):
             traci.trafficlights.setRedYellowGreenState(light.id, signal)
         traci.simulationStep()
 
-        vehicles = traci.simulation.getDepartedIDList()
+        vehicles = traci.simulation.getDepartedIDList() #VAR_LOADED_VEHICLES_NUMBER
         self.vehicles = traci.vehicle.getIDList() if option == 1 else ()
         self.assign_vot(vehicles)
         # option 1: subscribe vehicles
@@ -79,6 +79,7 @@ class TrafficVot(TrafficEnv):
             if option == 1:
                 vars.append(tc.VAR_LANE_ID)
             traci.vehicle.subscribe(veh_id, vars)
+            traci.simulation.subscribe
 
         # TODO: check if it is worthwhile to unsubscribe removed vehicles
         observation = self.observation()

@@ -2,7 +2,7 @@ import gym
 import gym_traffic_vot
 from tqdm import tqdm
 
-env = gym.make("traffic-vot-simple-v0")
+env = gym.make("traffic-vot-simple-gui-v0")
 phases = [(0, 40), (2, 5), (1, 40), (3, 5)]
 for episode in tqdm(range(10)):
     phase_time = 0
