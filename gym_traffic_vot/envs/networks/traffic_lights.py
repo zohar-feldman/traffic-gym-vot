@@ -37,3 +37,21 @@ class TrafficLightTwoWay(TrafficLight):
         else:
             raise ValueError("Invalid state {}".format(self.state))
         end
+
+class TrafficLightTwoWayAutoGreen(TrafficLight):
+    def __init__(self, id, yield_time=5):
+        super(TrafficLightTwoWay, self).__init__(id=id, actions=["GrGr", "rGrG", "yryr", "ryry"])
+        self.yield_time = yield_time
+
+    def action_allowed(self, action):
+        if self.state == 0:
+            return action == 2
+        elif self.state == 1:
+            return action == 3
+        elif self.state == 2:
+            return False
+        elif self.state == 3:
+            return False
+        else:
+            raise ValueError("Invalid state {}".format(self.state))
+        end

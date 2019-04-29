@@ -6,7 +6,7 @@ from scipy.stats import uniform, truncnorm, lognorm
 import numpy
 from traci import constants as tc
 import time
-
+from gym_traffic_vot.envs.networks.simple.simple_network import SimpleTrafficNetwork
 option = 2
 
 def one_hot(ind, depth):
@@ -14,18 +14,15 @@ def one_hot(ind, depth):
     res[ind] = 1
     return res
 
-class TrafficVot(TrafficEnv):
-    def __init__(self, lights, netfile, routefile, guifile, addfile, loops=[], lanes=[], inc_lanes=[], exitloops=[],
-                 tmpfile="tmp.rou.xml",
-                 pngfile="tmp.png", mode="gui", simulation_end=1000, sleep_between_restart=1):
-        super(TrafficVot, self).__init__(mode=mode, lights=lights, netfile=netfile, routefile=routefile,
-                                               guifile=guifile, loops=loops, addfile=addfile, simulation_end=simulation_end,
-                                               lanes=lanes, inc_lanes=inc_lanes, exitloops=exitloops)
+class TrafficVotEnv(TrafficEnv):
+    def __init__(self, network=SimpleTrafficNetwork(), mode="gui", simulation_end=1000, sleep_between_restart=1, vots = None):
+        super(TrafficVotEnv, self).__init__(mode=mode, network=network, simulation_end=simulation_end)
 
         self.cell_size = 4.5
         self.lanes_size = {id:math.ceil(traci.lane.getLength(id) / self.cell_size) for id in self.inc_lanes}
         self.lanes_max_speed = {id:50 for id in self.inc_lanes} # TODO: replace with traci.lane.getMaxSpeed(id)
-        self.vot_loc = {id:uniform.rvs(loc=1, scale=5, size=1) for id in self.inc_lanes}
+        self.vot_loc = None if vots is None else {id:vots[ind] for ind, id in enumerate(self.inc_lanes)}
+        print(self.vot_loc)
         if len(self.lights) == 1:
             self.action_space = spaces.Discrete(len(self.lights[0].actions))
         else:
@@ -40,6 +37,10 @@ class TrafficVot(TrafficEnv):
         light_size = sum([len(light.actions) for light in self.lights])
         low.extend([0] * light_size)
         high.extend([1] * light_size)
+        light_len = len(self.lights)
+        low.extend([0] * light_len)
+        high.extend([float('inf')] * light_len)
+
         # vot_space = spaces.Box(low=float('-inf'), high=float('inf'),
         #                           shape=(sum(self.lanes_size.values()),))
         # light_spaces = [spaces.Discrete(len(light.actions)) for light in self.lights]
@@ -52,14 +53,17 @@ class TrafficVot(TrafficEnv):
         self.vehicles = list()
 
     def start_sumo(self):
-        super(TrafficVot, self).start_sumo()
+        super(TrafficVotEnv, self).start_sumo()
         # option 2: subs
         if option == 2:
             for lane in self.inc_lanes:
                 traci.lane.subscribe(lane, [tc.LAST_STEP_VEHICLE_ID_LIST])
 
     def assign_vot(self, vehicles):
-        self.vehicles_vot.update({v:lognorm.rvs(size=1, s=1, loc=self.vot_loc[traci.vehicle.getLaneID(v)]) for v in vehicles}) # TODO: different distributions for different lanes
+        if self.vot_loc is None:
+            self.vehicles_vot.update({v:1 for v in vehicles})
+        else:
+            self.vehicles_vot.update({v:lognorm.rvs(size=1, s=1, loc=self.vot_loc[traci.vehicle.getLaneID(v)]) for v in vehicles}) # TODO: different distributions for different lanes
 
     def step(self, action):
         action = [action]
@@ -70,25 +74,24 @@ class TrafficVot(TrafficEnv):
             traci.trafficlights.setRedYellowGreenState(light.id, signal)
         traci.simulationStep()
 
-        vehicles = traci.simulation.getDepartedIDList() #VAR_LOADED_VEHICLES_NUMBER
+        self.last_step_loaded_vehicles = traci.simulation.getDepartedIDList() #VAR_LOADED_VEHICLES_NUMBER
         self.vehicles = traci.vehicle.getIDList() if option == 1 else ()
-        self.assign_vot(vehicles)
+        self.assign_vot(self.last_step_loaded_vehicles)
         # option 1: subscribe vehicles
-        for veh_id in vehicles:
+        for veh_id in self.last_step_loaded_vehicles:
             vars = [tc.VAR_LANEPOSITION, tc.VAR_SPEED]
             if option == 1:
                 vars.append(tc.VAR_LANE_ID)
             traci.vehicle.subscribe(veh_id, vars)
-            traci.simulation.subscribe
 
         # TODO: check if it is worthwhile to unsubscribe removed vehicles
-        observation = self.observation()
+        self.curr_observation = self.observation()
         reward = self.reward()
         done = self.sumo_step > self.simulation_end
         self.screenshot()
         if done:
             self.stop_sumo()
-        return observation, reward, done, self.route_info
+        return self.curr_observation, reward, done, self.route_info
 
     def observation(self):
         vot_state = {lane:numpy.zeros(shape=(self.lanes_size[lane],)) for lane in self.inc_lanes}
@@ -132,7 +135,8 @@ class TrafficVot(TrafficEnv):
         trafficobs = numpy.hstack(stack) # TODO: check if safe for order
         lightobs = [light.state for light in self.lights]
         lightobs = numpy.hstack([one_hot(light.state, len(light.actions)) for light in self.lights])
-        obs = numpy.hstack([trafficobs, velobs, lightobs])
+        lightstepobs = [light.step for light in self.lights]
+        obs = numpy.hstack([trafficobs, velobs, lightobs, lightstepobs])
         return obs
 
     def reward(self):

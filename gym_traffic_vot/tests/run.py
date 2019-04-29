@@ -7,6 +7,8 @@ import gym_traffic_vot
 from collections import defaultdict
 import tensorflow as tf
 import numpy as np
+from scipy.stats import sem, t
+from scipy import mean
 
 from baselines.common.vec_env import VecFrameStack, VecNormalize, VecEnv
 from baselines.common.vec_env.vec_video_recorder import VecVideoRecorder
@@ -29,6 +31,8 @@ try:
     import roboschool
 except ImportError:
     roboschool = None
+
+confidence = 0.95
 
 _game_envs = defaultdict(set)
 for env in gym.envs.registry.all():
@@ -85,7 +89,6 @@ def train(args, extra_args):
 
 
 def build_env(args):
-    # return gym.make("traffic-vot-simple-v0")
     ncpu = multiprocessing.cpu_count()
     if sys.platform == 'darwin': ncpu //= 2
     nenv = args.num_env or ncpu
@@ -223,6 +226,7 @@ def main(args):
         dones = np.zeros((1,))
 
         episode_rew = 0
+        episode_rewards = []
         while True:
             if state is not None:
                 actions, _, state, _ = model.step(obs,S=state, M=dones)
@@ -234,8 +238,17 @@ def main(args):
             env.render()
             done = done.any() if isinstance(done, np.ndarray) else done
             if done:
+                episode_rewards.append(episode_rew)
                 print('episode_rew={}'.format(episode_rew))
                 episode_rew = 0
+                if 0 == len(episode_rewards) % 10:
+                    n = len(episode_rewards)
+                    m = mean(episode_rewards)
+                    std_err = sem(episode_rewards)
+                    h = std_err * t.ppf((1 + confidence) / 2, n - 1)
+                    print('Avg. reward of last {} episodes is [{:.2f}-{:.2f}]'.format(n, m - h, m + h))
+                    if h < abs(m * 0.01):
+                        break
                 obs = env.reset()
 
     env.close()

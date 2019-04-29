@@ -1,10 +1,15 @@
 import gym
 import gym_traffic_vot
 from tqdm import tqdm
+from scipy.stats import sem, t
+from scipy import mean
 
-env = gym.make("traffic-vot-simple-gui-v0")
+env = gym.make("traffic-vot-simple-v0")
 phases = [(0, 40), (2, 5), (1, 40), (3, 5)]
-for episode in tqdm(range(10)):
+episode_rewards = []
+confidence = 0.95
+
+while True:
     phase_time = 0
     phase = 0
     episode_losses = []
@@ -23,4 +28,14 @@ for episode in tqdm(range(10)):
         if done:
             observation = env.reset()
     print('episode reward={}'.format(total_reward))
+    episode_rewards.append(total_reward)
+    if 0 == len(episode_rewards) % 10:
+        n = len(episode_rewards)
+        m = mean(episode_rewards)
+        std_err = sem(episode_rewards)
+        h = std_err * t.ppf((1 + confidence) / 2, n - 1)
+        print('Avg. reward of last {} episodes is [{:.2f}-{:.2f}]'.format(n, m - h, m + h))
+        if h < abs(m * 0.01):
+            break
+
 env.close()

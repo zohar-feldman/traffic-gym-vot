@@ -1,17 +1,9 @@
 from gym import Env
-from gym import error, spaces, utils
-from gym.error import Error
 from gym.utils import seeding
 import traci
-import traci.constants as tc
 from scipy.misc import imread
-from gym import spaces
 from string import Template
 import os, sys
-import numpy as np
-import math
-import random
-import time
 
 if 'SUMO_HOME' in os.environ:
     tools = os.path.join(os.environ['SUMO_HOME'], 'tools')
@@ -23,42 +15,57 @@ else:
 class TrafficEnv(Env):
     metadata = {'render.modes': ['human', 'rgb_array']}
 
-    def __init__(self, lights, netfile, routefile, guifile, addfile, loops=[], lanes=[], inc_lanes=[], exitloops=[],
-                 tmpfile="tmp.rou.xml",
-                 pngfile="tmp.png", mode="gui", simulation_end=3600, sleep_between_restart=1):
+    def __init__(self, network, mode="gui", simulation_end=3600, sleep_between_restart=1, tmpfile="tmp.rou.xml",
+                 pngfile="tmp.png"):
+        self.network = network
         self.simulation_end = simulation_end
         self.sleep_between_restart = sleep_between_restart
         self.mode = mode
-        args = ["--net-file", netfile, "--route-files", tmpfile, "--additional-files", addfile]
+        self.pngfile = pngfile
+        self.tmpfile = tmpfile
+        args = ["--net-file", network.netfile, "--route-files", tmpfile, "--additional-files", network.addfile]
         if mode == "gui":
             binary = "sumo-gui"
-            args += ["-S", "-Q", "--gui-settings-file", guifile]
+            args += ["-S", "-Q", "--gui-settings-file", network.guifile]
         else:
             binary = "sumo"
             args += ["--no-step-log"]
 
-        with open(routefile) as f:
+        with open(network.routefile) as f:
             self.route = f.read()
-        self.tmpfile = tmpfile
-        self.pngfile = pngfile
         self.sumo_cmd = [binary] + args
         self.sumo_running = False
         self._seed()
-        self.simulation_end =  simulation_end
+        self.simulation_end = simulation_end
         self.sleep_between_restart = sleep_between_restart
-        self.lanes = lanes
-        self.inc_lanes = inc_lanes
-        self.loops = loops
-        self.exit_loops = exitloops
-        self.lights = lights
         self.start_sumo()
         self.viewer = None
+
+    @property
+    def lanes(self):
+        return self.network.lanes
+
+    @property
+    def inc_lanes(self):
+        return self.network.inc_lanes
+
+    @property
+    def loops(self):
+        return self.network.loops
+
+    @property
+    def exit_loops(self):
+        return self.network.exit_loops
+
+    @property
+    def lights(self):
+        return self.network.lights
 
     def relative_path(self, *paths):
         os.path.join(os.path.dirname(__file__), *paths)
 
     def write_routes(self):
-        self.route_info = self.route_sample()
+        self.route_info = self.network.route_sample(self.np_random)
         with open(self.tmpfile, 'w') as f:
             f.write(Template(self.route).substitute(self.route_info))
 
@@ -78,8 +85,6 @@ class TrafficEnv(Env):
         if self.sumo_running:
             traci.close()
             self.sumo_running = False
-
-
 
     def render(self, mode='human', close=False):
         if close:
