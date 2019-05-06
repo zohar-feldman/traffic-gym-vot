@@ -14,20 +14,32 @@ def one_hot(ind, depth):
     res[ind] = 1
     return res
 
+def sample():
+    values = numpy.array([28.12, 40.89, 53.62, 73.70, 104.56, 145.37]) / 60
+    weights = [0.1, 0.15, 0.25, 0.25, 0.15, 0.1]
+    return numpy.random.choice(values, 1, p=weights)
+
 class TrafficVotEnv(TrafficEnv):
-    def __init__(self, network=SimpleTrafficNetwork(), mode="gui", simulation_end=1000, sleep_between_restart=1, vots = None):
+    def __init__(self, network="simple", arrival_rate=None, scale=None, mode="gui", simulation_end=1000, sleep_between_restart=1, vots = True): #TODO: kqargs
+        self.scales = {}
+        self.scale = scale if scale is not None else 1
+        if network == "simple":
+            if scale is None:
+                self.scale = 1
+            if arrival_rate is None:
+                arrival_rate = 0.2
+            self.scales.update({'n_0_0':1, 's_0_0':1, 'w_0_0':scale, 'e_0_0':scale})
+            network = SimpleTrafficNetwork(arrival_rate, self.scales)
         super(TrafficVotEnv, self).__init__(mode=mode, network=network, simulation_end=simulation_end)
 
         self.cell_size = 4.5
         self.lanes_size = {id:math.ceil(traci.lane.getLength(id) / self.cell_size) for id in self.inc_lanes}
         self.lanes_max_speed = {id:50 for id in self.inc_lanes} # TODO: replace with traci.lane.getMaxSpeed(id)
-        self.vot_loc = None if vots is None else {id:vots[ind] for ind, id in enumerate(self.inc_lanes)}
-        print(self.vot_loc)
         if len(self.lights) == 1:
             self.action_space = spaces.Discrete(len(self.lights[0].actions))
         else:
             self.action_space = spaces.MultiDiscrete([len(l.actions) for l in self.lights])
-
+        self.vots = vots
         vot_size = sum(self.lanes_size.values())
         low = [float('-inf')] * vot_size
         high = [0] * vot_size
@@ -41,13 +53,6 @@ class TrafficVotEnv(TrafficEnv):
         low.extend([0] * light_len)
         high.extend([float('inf')] * light_len)
 
-        # vot_space = spaces.Box(low=float('-inf'), high=float('inf'),
-        #                           shape=(sum(self.lanes_size.values()),))
-        # light_spaces = [spaces.Discrete(len(light.actions)) for light in self.lights]
-        # lane_vel_space = spaces.Box(low=float(0), high=float('inf'),
-        #                           shape=(len(self.inc_lanes),))
-
-        # self.observation_space = spaces.Tuple([vot_space] + [lane_vel_space] + light_spaces)
         self.observation_space = spaces.Box(low=numpy.array(low), high=numpy.array(high))
         self.vehicles_vot = dict()
         self.vehicles = list()
@@ -60,10 +65,10 @@ class TrafficVotEnv(TrafficEnv):
                 traci.lane.subscribe(lane, [tc.LAST_STEP_VEHICLE_ID_LIST])
 
     def assign_vot(self, vehicles):
-        if self.vot_loc is None:
-            self.vehicles_vot.update({v:1 for v in vehicles})
+        if self.vots:
+            self.vehicles_vot.update({v:sample() * self.scale / self.scales[traci.vehicle.getLaneID(v)] for v in vehicles})
         else:
-            self.vehicles_vot.update({v:lognorm.rvs(size=1, s=1, loc=self.vot_loc[traci.vehicle.getLaneID(v)]) for v in vehicles}) # TODO: different distributions for different lanes
+            self.vehicles_vot.update({v:1 for v in vehicles}) # TODO: different distributions for different lanes
 
     def step(self, action):
         action = [action]

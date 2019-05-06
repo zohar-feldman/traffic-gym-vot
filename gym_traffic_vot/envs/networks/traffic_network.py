@@ -18,3 +18,6 @@ class TrafficNetwork(object):
 
     def route_sample(self, random):
         pass
+
+    def max_cross_time(self):
+        return 4

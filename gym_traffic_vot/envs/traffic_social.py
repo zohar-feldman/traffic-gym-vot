@@ -11,7 +11,7 @@ import math
 from gym_traffic_vot.envs.networks.simple.simple_network import SimpleTrafficNetwork
 
 class TrafficSocialEnv(TrafficVotEnv):
-    def __init__(self, load_path, network=SimpleTrafficNetwork(), mode="gui", simulation_end=1000, sleep_between_restart=1, vots = None):
+    def __init__(self, load_path, network=SimpleTrafficNetwork(None, None), mode="gui", simulation_end=1000, sleep_between_restart=1, vots = None):
         super(TrafficSocialEnv, self).__init__(mode=mode, network=network, simulation_end=simulation_end, vots=vots)
         self.sess = tf.Session()
         q_func = build_q_func('mlp')
