@@ -1,6 +1,5 @@
 from gym import Env
 from gym.utils import seeding
-import traci
 from scipy.misc import imread
 from string import Template
 import os, sys
@@ -10,6 +9,7 @@ if 'SUMO_HOME' in os.environ:
     sys.path.append(tools)
 else:
     sys.exit("please declare environment variable 'SUMO_HOME'")
+import traci
 
 
 class TrafficEnv(Env):

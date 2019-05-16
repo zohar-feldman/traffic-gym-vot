@@ -20,7 +20,7 @@ def sample():
     return numpy.random.choice(values, 1, p=weights)
 
 class TrafficVotEnv(TrafficEnv):
-    def __init__(self, network="simple", arrival_rate=None, scale=None, mode="gui", simulation_end=1000, sleep_between_restart=1, vots = True): #TODO: kqargs
+    def __init__(self, network="simple", arrival_rate=None, scale=None, mode="gui", simulation_end=1000, sleep_between_restart=0, vots = True): #TODO: kqargs
         self.scales = {}
         self.scale = scale if scale is not None else 1
         if network == "simple":
