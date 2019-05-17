@@ -28,7 +28,7 @@ class TrafficVotEnv(TrafficEnv):
                 self.scale = 1
             if arrival_rate is None:
                 arrival_rate = 0.2
-            self.scales.update({'n_0_0':1, 's_0_0':1, 'w_0_0':scale, 'e_0_0':scale})
+            self.scales.update({'n_0_0':1, 's_0_0':1, 'w_0_0':self.scale, 'e_0_0':self.scale})
             network = SimpleTrafficNetwork(arrival_rate, self.scales)
         super(TrafficVotEnv, self).__init__(mode=mode, network=network, simulation_end=simulation_end)
 
