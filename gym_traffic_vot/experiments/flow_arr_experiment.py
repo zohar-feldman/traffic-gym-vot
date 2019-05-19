@@ -27,7 +27,7 @@ def main(args):
     arg_parser = run.common_arg_parser()
     args, unknown_args = arg_parser.parse_known_args(args)
     extra_args = run.parse_cmdline_kwargs(unknown_args)
-    for a in np.arange(0.02, 0.17, 0.02):
+    for a in np.arange(0.04, 0.17, 0.02):
         for s in [1,2,4,8]:
             save_path = osp.join('~{}projects'.format(os.sep),'traffic-gym-vot','models','flow_{}_{}_deepq'.format(a, s))
             res_path = osp.join('~{}projects'.format(os.sep),'traffic-gym-vot','resutls','flow_{}_{}_deepq.txt'.format(a, s))
@@ -64,7 +64,7 @@ def main(args):
             dir_name = os.path.dirname(osp.expanduser(res_path))
             os.makedirs(dir_name, exist_ok=True)
             f = open(osp.expanduser(res_path), 'w+')
-            while True and len(episode_rewards) < 1000:
+            while True and len(episode_rewards) < 0:
                 if state is not None:
                     actions, _, state, _ = model.step(obs,S=state, M=dones)
                 else:
