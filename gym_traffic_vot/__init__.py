@@ -28,8 +28,6 @@ register(
     id='traffic-social-simple-v0',
     entry_point='gym_traffic_vot.envs:TrafficSocialEnv',
     tags={'wrapper_config.TimeLimit.max_episode_steps': 1000},
-    kwargs={"mode": "cli",
-            "load_path":"C:/Users/FEZ1TV/PycharmProjects/gym-traffic-vot/models/vot2_1M_deepq"
-           },
+    kwargs={"mode": "cli"},
     nondeterministic=True
 )

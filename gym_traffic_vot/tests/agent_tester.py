@@ -6,8 +6,10 @@ import tensorflow as tf
 from baselines.deepq.models import build_q_func
 from scipy.stats import sem, t
 from scipy import mean
+import os
 
-env = gym.make("traffic-social-simple-v0")
+root = os.path.dirname(gym_traffic_vot.__file__)
+env = gym.make("traffic-social-simple-v0", load_path=os.path.join(root, 'models', 'vot_{}_{}_deepq'.format(0.2, 1)))
 sess = tf.Session()
 
 episode_rewards = []
