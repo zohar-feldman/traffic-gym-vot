@@ -50,8 +50,9 @@ def main(args):
             f = open(osp.expanduser(res_path), 'w+')
             phase_time = 0
             phase = 0
+            step = 0
             while True and len(episode_rewards) < 300:
-
+                step += 1
                 if phase_time == phases[phase][1]:
                     phase = (phase + 1) % 4
                     phase_time = 0
@@ -67,6 +68,7 @@ def main(args):
                     episode_rewards.append(episode_rew)
                     f.write("episode_rew={}\n".format(episode_rew))
                     episode_rew = 0
+                    step = 0
                     if 0 == len(episode_rewards) % 10:
                         n = len(episode_rewards)
                         m, std_err, lb, ub = sample_stats(episode_rewards, confidence)
