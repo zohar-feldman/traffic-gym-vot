@@ -21,6 +21,7 @@ def sample_stats(sample, confidence):
 
     return m, std_err, m - h, m + h
 
+phases = [(0, 40), (2, 5), (1, 40), (3, 5)]
 
 def main(args):
     # configure logger, disable logging in child MPI processes (with rank > 0)
@@ -31,55 +32,38 @@ def main(args):
     # a_end = extra_args['a_end']
     # extra_args.pop('a_start')
     # extra_args.pop('a_end')
-    for a in np.arange(0.02, 0.17, 0.02):
+    for a in np.arange(0.02, 0.17, 0.04):
         for s in [1,2,4,8]:
-            load_path = '~/projects/traffic-gym-vot/models/flow_{}_{}_deepq'.format(round(a, 2), round(s, 2))
-            res_path = '~/projects/traffic-gym-vot/resutls/vot_flow{}_{}_deepq.txt'.format(round(a, 2), round(s, 2))
+            res_path = '~/projects/traffic-gym-vot/resutls/simple_{}_{}_deepq.txt'.format(round(a, 2), round(s, 2))
             env_name = 'traffic-vot-simple-v0'
 
             env = gym.make(env_name, network='simple', arrival_rate=a, scale=s)
-            if args.network:
-                extra_args['network'] = args.network
-            else:
-                if extra_args.get('network') is None:
-                    extra_args['network'] = 'mlp'
-
-            print('Training {} on {} with arguments \n{}'.format(args.alg, env_name, extra_args))
-
-            learn = run.get_learn_function(args.alg)
-            extra_args['load_path'] = load_path
-            model = learn(
-                env=env,
-                seed=args.seed,
-                total_timesteps=int(args.num_timesteps),
-                **extra_args
-            )
-
-            # save_path = osp.expanduser(save_path)
-            # model.save(save_path)
 
             logger.log("Running trained model")
             obs = env.reset()
 
-            state = model.initial_state if hasattr(model, 'initial_state') else None
-            dones = np.zeros((1,))
 
             episode_rew = 0
             episode_rewards = []
             dir_name = os.path.dirname(osp.expanduser(res_path))
             os.makedirs(dir_name, exist_ok=True)
             f = open(osp.expanduser(res_path), 'w+')
-            while True and len(episode_rewards) < 1000:
-                if state is not None:
-                    actions, _, state, _ = model.step(obs,S=state, M=dones)
-                else:
-                    actions, _, _, _ = model.step(obs)
+            phase_time = 0
+            phase = 0
+            while True and len(episode_rewards) < 300:
 
-                obs, rew, done, _ = env.step(actions[0])
+                if phase_time == phases[phase][1]:
+                    phase = (phase + 1) % 4
+                    phase_time = 0
+                # action = env.action_space.sample() # your agent here (this takes random actions)
+                action = phases[phase][0]
+                obs, rew, done, _ = env.step(action)
                 episode_rew += rew
+                phase_time += 1
                 env.render()
-                done = done.any() if isinstance(done, np.ndarray) else done
                 if done:
+                    phase_time = 0
+                    phase = 0
                     episode_rewards.append(episode_rew)
                     f.write("episode_rew={}\n".format(episode_rew))
                     episode_rew = 0

@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf42079e-d0c9-479a-b75c-d05c42752b5a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gym_traffic_vot/envs/networks/simple/out.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gym_traffic_vot/envs/networks/simple/out.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gym_traffic_vot/experiments/flow_arr_experiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/gym_traffic_vot/experiments/flow_arr_experiment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym_traffic_vot/envs/traffic_social.py" beforeDir="false" afterPath="$PROJECT_DIR$/gym_traffic_vot/envs/traffic_social.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym_traffic_vot/experiments/simple_arr_scale_experiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/gym_traffic_vot/experiments/simple_arr_scale_experiment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym_traffic_vot/experiments/social_arr_scale_experiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/gym_traffic_vot/experiments/social_arr_scale_experiment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym_traffic_vot/experiments/vot_arr_scale_experiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/gym_traffic_vot/experiments/vot_arr_scale_experiment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/social_0.02_1_deepq.txt" beforeDir="false" afterPath="$PROJECT_DIR$/results/social_0.02_1_deepq.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/social_0.02_2_deepq.txt" beforeDir="false" afterPath="$PROJECT_DIR$/results/social_0.02_2_deepq.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,12 +20,84 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gym_traffic_vot/envs/traffic_env.py">
+        <entry file="file://$PROJECT_DIR$/gym_traffic_vot/experiments/simple_arr_scale_experiment.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-122">
-              <caret line="78" selection-start-line="78" selection-end-line="78" />
+            <state relative-caret-position="247">
+              <caret line="50" column="12" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gym_traffic_vot/tests/agent_tester.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="11" column="115" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="115" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gym_traffic_vot/experiments/social_arr_scale_experiment.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="296">
+              <caret line="73" column="53" selection-start-line="73" selection-start-column="53" selection-end-line="73" selection-end-column="53" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../baselines/baselines/deepq/deepq.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="255" selection-start-line="255" selection-end-line="255" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../baselines/baselines/common/tf_util.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="365" column="16" selection-start-line="365" selection-start-column="16" selection-end-line="365" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../baselines/baselines/deepq/build_graph.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-278">
+              <caret line="145" column="4" selection-start-line="145" selection-start-column="4" selection-end-line="145" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/gym/envs/registration.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="142">
+              <caret line="88" selection-start-line="88" selection-end-line="88" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gym_traffic_vot/envs/traffic_social.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#66#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -28,7 +106,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gym_traffic_vot/envs/traffic_vot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="159">
               <caret line="23" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="e#0#55#0" expanded="true" />
@@ -38,85 +116,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gym_traffic_vot/__init__.py">
+        <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/joblib/numpy_pickle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gym_traffic_vot/envs/traffic_social.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="13" column="73" selection-start-line="13" selection-start-column="73" selection-end-line="13" selection-end-column="73" />
-              <folding>
-                <element signature="e#0#66#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gym_traffic_vot/experiments/vot_arr_scale_experiment.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="55" column="22" selection-end-line="98" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gym_traffic_vot/experiments/flow_arr_experiment.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gym_traffic_vot/tests/agent_tester.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gym_traffic_vot/tests/simple_tester.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-133">
-              <caret line="5" selection-end-line="5" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gym_traffic_vot/envs/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gym_traffic_vot/tests/run.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3010">
-              <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="240">
+              <caret line="589" selection-start-line="589" selection-end-line="589" />
             </state>
           </provider>
         </entry>
@@ -132,8 +135,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>network_kwargs</find>
-      <find>learn(</find>
       <find>def save</find>
       <find>save(</find>
       <find>load</find>
@@ -162,6 +163,8 @@
       <find>sleep_between_restart</find>
       <find>Retryi</find>
       <find>DummyVecEnv</find>
+      <find>model =</find>
+      <find>save_path</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -179,24 +182,26 @@
         <option value="$PROJECT_DIR$/gym_traffic_vot/envs/__init__.py" />
         <option value="$PROJECT_DIR$/gym_traffic_vot/envs/networks/traffic_lights.py" />
         <option value="$PROJECT_DIR$/gym_traffic_vot/tests/simple_tester.py" />
-        <option value="$PROJECT_DIR$/gym_traffic_vot/tests/agent_tester.py" />
         <option value="$PROJECT_DIR$/gym_traffic_vot/envs/networks/traffic_network.py" />
         <option value="$PROJECT_DIR$/gym_traffic_vot/tests/run.py" />
         <option value="$PROJECT_DIR$/gym_traffic_vot/__init__.py" />
-        <option value="$PROJECT_DIR$/gym_traffic_vot/envs/traffic_social.py" />
         <option value="$PROJECT_DIR$/gym_traffic_vot/envs/networks/simple/simple_network.py" />
         <option value="$PROJECT_DIR$/gym_traffic_vot/envs/networks/simple/traffic_simple.py" />
         <option value="$PROJECT_DIR$/gym_traffic_vot/envs/traffic_env.py" />
-        <option value="$PROJECT_DIR$/gym_traffic_vot/experiments/vot_arr_scale_experiment.py" />
         <option value="$PROJECT_DIR$/gym_traffic_vot/envs/traffic_vot.py" />
         <option value="$PROJECT_DIR$/gym_traffic_vot/experiments/flow_arr_experiment.py" />
+        <option value="$PROJECT_DIR$/gym_traffic_vot/experiments/vot_arr_scale_experiment.py" />
+        <option value="$PROJECT_DIR$/gym_traffic_vot/experiments/simple_arr_scale_experiment.py" />
+        <option value="$PROJECT_DIR$/gym_traffic_vot/tests/agent_tester.py" />
+        <option value="$PROJECT_DIR$/../baselines/baselines/common/tf_util.py" />
+        <option value="$PROJECT_DIR$/gym_traffic_vot/experiments/social_arr_scale_experiment.py" />
+        <option value="$PROJECT_DIR$/gym_traffic_vot/envs/traffic_social.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-12" />
-    <option name="y" value="10" />
-    <option name="width" value="1940" />
+    <option name="width" value="1859" />
     <option name="height" value="1014" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -205,71 +210,55 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="gym-traffic-vot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gym-traffic-vot" type="462c0819:PsiDirectoryNode" />
+              <item name="traffic-gym-vot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="traffic-gym-vot" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="gym-traffic-vot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gym-traffic-vot" type="462c0819:PsiDirectoryNode" />
+              <item name="traffic-gym-vot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="traffic-gym-vot" type="462c0819:PsiDirectoryNode" />
               <item name="gym_traffic_vot" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="gym-traffic-vot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gym-traffic-vot" type="462c0819:PsiDirectoryNode" />
-              <item name="gym_traffic_vot" type="462c0819:PsiDirectoryNode" />
-              <item name="envs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gym-traffic-vot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gym-traffic-vot" type="462c0819:PsiDirectoryNode" />
+              <item name="traffic-gym-vot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="traffic-gym-vot" type="462c0819:PsiDirectoryNode" />
               <item name="gym_traffic_vot" type="462c0819:PsiDirectoryNode" />
               <item name="envs" type="462c0819:PsiDirectoryNode" />
-              <item name="networks" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="gym-traffic-vot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gym-traffic-vot" type="462c0819:PsiDirectoryNode" />
-              <item name="gym_traffic_vot" type="462c0819:PsiDirectoryNode" />
-              <item name="envs" type="462c0819:PsiDirectoryNode" />
-              <item name="networks" type="462c0819:PsiDirectoryNode" />
-              <item name="simple" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gym-traffic-vot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gym-traffic-vot" type="462c0819:PsiDirectoryNode" />
+              <item name="traffic-gym-vot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="traffic-gym-vot" type="462c0819:PsiDirectoryNode" />
               <item name="gym_traffic_vot" type="462c0819:PsiDirectoryNode" />
               <item name="experiments" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="gym-traffic-vot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gym-traffic-vot" type="462c0819:PsiDirectoryNode" />
-              <item name="gym_traffic_vot" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gym-traffic-vot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gym-traffic-vot" type="462c0819:PsiDirectoryNode" />
+              <item name="traffic-gym-vot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="traffic-gym-vot" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="gym-traffic-vot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gym-traffic-vot" type="462c0819:PsiDirectoryNode" />
+              <item name="traffic-gym-vot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="traffic-gym-vot" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="traffic-gym-vot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="traffic-gym-vot" type="462c0819:PsiDirectoryNode" />
               <item name="resutls" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/gym_traffic_vot/experiments/flow_arr_experiment.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/gym_traffic_vot/experiments/social_arr_scale_experiment.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -289,12 +278,13 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\FEZ1TV\PycharmProjects\gym-traffic-vot\gym_traffic_vot\experiments" />
-      <recent name="C:\Users\FEZ1TV\PycharmProjects\gym-traffic-vot\gym_traffic_vot\tests" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\FEZ1TV\PycharmProjects\gym-traffic-vot\gym_traffic_vot\envs\networks" />
+      <recent name="C:\Users\FEZ1TV\PycharmProjects\gym-traffic-vot\gym_traffic_vot\tests" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/gym_traffic_vot/experiments" />
+      <recent name="C:\Users\FEZ1TV\PycharmProjects\gym-traffic-vot\gym_traffic_vot\experiments" />
       <recent name="C:\Users\FEZ1TV\PycharmProjects\gym-traffic-vot\gym_traffic_vot\tests" />
     </key>
   </component>
@@ -310,7 +300,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.flow_arr_experiment">
+  <component name="RunManager" selected="Python.social_arr_scale_experiment">
     <configuration name="agent_tester" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="gym-traffic-vot" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -332,20 +322,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="flow_arr_experiment" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="simple_arr_scale_experiment" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="gym-traffic-vot" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\FEZ1TV\AppData\Local\Continuum\anaconda3\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/gym_traffic_vot/experiments" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gym_traffic_vot/experiments/flow_arr_experiment.py" />
-      <option name="PARAMETERS" value="--alg=deepq --num_timesteps=1e6 --print_freq=100 --exploration_fraction=0.5 --exploration_final_eps=0.1" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gym_traffic_vot/experiments/simple_arr_scale_experiment.py" />
+      <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -367,6 +357,27 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="C:\Users\FEZ1TV\PycharmProjects\gym-traffic-vot\gym_traffic_vot\tests\simple_tester.py" />
       <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="social_arr_scale_experiment" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="gym-traffic-vot" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/gym_traffic_vot/experiments" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gym_traffic_vot/experiments/social_arr_scale_experiment.py" />
+      <option name="PARAMETERS" value="--alg=deepq --num_timesteps=0 --print_freq=100 --exploration_fraction=0.5 --exploration_final_eps=0.1" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -471,7 +482,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gym_traffic_vot/experiments/vot_arr_scale_experiment.py" />
-      <option name="PARAMETERS" value="--alg=deepq --num_timesteps=2e6 --print_freq=100 --exploration_fraction=0.5 --exploration_final_eps=0.1" />
+      <option name="PARAMETERS" value="--alg=deepq --num_timesteps=0 --print_freq=100 --exploration_fraction=0.5 --exploration_final_eps=0.1" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -501,18 +512,20 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.agent_tester" />
+      <item itemvalue="Python.simple_tester" />
+      <item itemvalue="Python.test_social" />
+      <item itemvalue="Python.test_vot" />
       <item itemvalue="Python.train_flow" />
       <item itemvalue="Python.train_vot" />
-      <item itemvalue="Python.test_vot" />
-      <item itemvalue="Python.test_social" />
-      <item itemvalue="Python.agent_tester" />
-      <item itemvalue="Python.vot_test_random" />
-      <item itemvalue="Python.simple_tester" />
       <item itemvalue="Python.vot_arr_scale_experiment" />
-      <item itemvalue="Python.flow_arr_experiment" />
+      <item itemvalue="Python.social_arr_scale_experiment" />
+      <item itemvalue="Python.vot_test_random" />
+      <item itemvalue="Python.simple_arr_scale_experiment" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.simple_arr_scale_experiment" />
         <item itemvalue="Python.agent_tester" />
       </list>
     </recent_temporary>
@@ -531,22 +544,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1933" height="1053" extended-state="6" />
+    <frame x="-12" y="0" width="1859" height="1014" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13227513" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14145811" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32790887" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19470046" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.41020408" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4445741" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.40956825" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3280943" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32790887" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32788798" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.2617587" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.2613769" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -577,7 +590,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/gym_traffic_vot/experiments/vot_arr_scale_experiment.py</url>
-          <line>80</line>
+          <line>85</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -600,11 +613,40 @@
           <line>35</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/gym_traffic_vot/tests/run.py</url>
+          <line>119</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/gym_traffic_vot/experiments/simple_arr_scale_experiment.py</url>
+          <line>55</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/gym_traffic_vot/experiments/social_arr_scale_experiment.py</url>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>os.path.expanduser(load_path)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>extra_args</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>alg_kwargs</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>save_path</expression-string>
         <language-id>Python</language-id>
@@ -635,78 +677,9 @@
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>args.reward_scale</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>args.num_env</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>args.env_type</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/Lib/site-packages/gym/wrappers/time_limit.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/Lib/codecs.py" />
-    <entry file="file://$PROJECT_DIR$/../baselines/baselines/common/vec_env/vec_env.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="107" selection-start-line="107" selection-end-line="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../baselines/baselines/common/vec_env/dummy_vec_env.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files (x86)/Eclipse/Sumo/tools/traci/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/../baselines/baselines/deepq/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files (x86)/Eclipse/Sumo/tools/traci/connection.py" />
-    <entry file="file://C:/Program Files (x86)/Eclipse/Sumo/tools/traci/domain.py" />
-    <entry file="file://C:/Program Files (x86)/Eclipse/Sumo/tools/traci/_simulation.py" />
-    <entry file="file://$PROJECT_DIR$/../baselines/baselines/common/tf_util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="369" selection-start-line="369" selection-end-line="369" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../baselines/baselines/common/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/Lib/site-packages/tensorflow/python/ops/variable_scope.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/Lib/site-packages/tensorflow/python/util/deprecation.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/Lib/site-packages/tensorflow/python/ops/math_ops.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/Lib/site-packages/scipy/stats/_continuous_distns.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/Lib/site-packages/tensorflow/python/ops/gen_array_ops.py" />
-    <entry file="file://$PROJECT_DIR$/../baselines/baselines/a2c/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1083">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/Lib/site-packages/gym/envs/registration.py" />
     <entry file="file://$PROJECT_DIR$/gym_traffic_vot/tests/tmp.png" />
     <entry file="file://$PROJECT_DIR$/gym_traffic_vot/tests/tmp.rou.xml">
       <provider selected="true" editor-type-id="text-editor" />
@@ -732,7 +705,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/gym/envs/registration.py" />
     <entry file="file://$PROJECT_DIR$/../baselines/baselines/common/cmd_util.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -740,51 +712,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../baselines/baselines/deepq/deepq.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="208" selection-start-line="208" selection-end-line="208" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/numpy/core/_methods.py" />
     <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/numpy/core/fromnumeric.py" />
-    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/tensorflow/python/client/session.py" />
-    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/tensorflow/python/framework/ops.py" />
-    <entry file="file://$PROJECT_DIR$/resutls/vot_0.01_1_deepq.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resutls/vot_0.02_1_deepq.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5470" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resutls/vot_0.02_2_deepq.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7010" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resutls/vot_0.02_4_deepq.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9530" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resutls/vot_0.02_8_deepq.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13730" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resutls/vot_0.08_8_deepq.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resutls/vot_0.16_2_deepq.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13870" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gym_traffic_vot/envs/networks/simple/simple_network.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
@@ -802,16 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gym_traffic_vot/envs/traffic_social.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="13" column="73" selection-start-line="13" selection-start-column="73" selection-end-line="13" selection-end-column="73" />
-          <folding>
-            <element signature="e#0#66#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gym_traffic_vot/envs/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -819,44 +738,156 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gym_traffic_vot/__init__.py">
+    <entry file="file://$PROJECT_DIR$/gym_traffic_vot/experiments/flow_arr_experiment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+        <state relative-caret-position="113">
+          <caret line="66" column="54" selection-start-line="66" selection-start-column="52" selection-end-line="66" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gym_traffic_vot/experiments/vot_arr_scale_experiment.py">
+    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/tensorflow/python/client/session.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="55" column="22" selection-end-line="98" selection-end-column="18" />
+        <state relative-caret-position="3864">
+          <caret line="299" selection-start-line="299" selection-end-line="299" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gym_traffic_vot/envs/traffic_vot.py">
+    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/tensorflow/python/framework/ops.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="48020">
+          <caret line="3477" selection-start-line="3477" selection-end-line="3477" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resutls/vot_0.02_2_deepq.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resutls/vot_0.02_4_deepq.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resutls/vot_0.08_8_deepq.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resutls/vot_0.16_2_deepq.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gym_traffic_vot/tests/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="84" column="20" selection-start-line="84" selection-start-column="10" selection-end-line="84" selection-end-column="20" />
           <folding>
-            <element signature="e#0#55#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gym_traffic_vot/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../baselines/baselines/deepq/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="102" selection-start-line="102" selection-end-line="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resutls/vot_flow0.06_1_deepq.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/gym_traffic_vot/envs/traffic_env.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-122">
-          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        <state relative-caret-position="520">
+          <caret line="72" column="31" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resutls/vot_0.13999999999999999_8_deepq.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13706" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resutls/vot_0.13999999999999999_4_deepq.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13706" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resutls/vot_0.12000000000000001_8_deepq.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13706" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resutls/vot_0.16_8_deepq.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13706" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resutls/vot_0.02_8_deepq.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13566" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resutls/vot_flow0.02_1_deepq.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4746" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resutls/vot_0.01_1_deepq.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resutls/vot_0.02_1_deepq.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5306" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resutls/vot_flow0.1_4_deepq.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13706" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resutls/vot_0.1_4_deepq.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13706" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resutls/vot_flow0.1_8_deepq.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6958" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resutls/vot_flow0.14_2_deepq.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resutls/vot_flow0.14_1_deepq.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gym_traffic_vot/tests/simple_tester.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-133">
-          <caret line="5" selection-end-line="5" />
+        <state relative-caret-position="204">
+          <caret line="28" column="37" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gym_traffic_vot/experiments/vot_arr_scale_experiment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="804">
+          <caret line="78" column="34" selection-start-line="78" selection-start-column="34" selection-end-line="78" selection-end-column="34" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
@@ -865,28 +896,86 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gym_traffic_vot/tests/agent_tester.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        <state relative-caret-position="42">
+          <caret line="11" column="115" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="115" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gym_traffic_vot/tests/run.py">
+    <entry file="file://$PROJECT_DIR$/gym_traffic_vot/experiments/simple_arr_scale_experiment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3010">
-          <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
+        <state relative-caret-position="247">
+          <caret line="50" column="12" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/gym/envs/registration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gym_traffic_vot/envs/traffic_vot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/joblib/numpy_pickle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="589" selection-start-line="589" selection-end-line="589" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../baselines/baselines/deepq/build_graph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-278">
+          <caret line="145" column="4" selection-start-line="145" selection-start-column="4" selection-end-line="145" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../baselines/baselines/deepq/deepq.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="255" selection-start-line="255" selection-end-line="255" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../baselines/baselines/common/tf_util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="365" column="16" selection-start-line="365" selection-start-column="16" selection-end-line="365" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gym_traffic_vot/experiments/social_arr_scale_experiment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="73" column="53" selection-start-line="73" selection-start-column="53" selection-end-line="73" selection-end-column="53" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gym_traffic_vot/experiments/flow_arr_experiment.py">
+    <entry file="file://$PROJECT_DIR$/gym_traffic_vot/envs/traffic_social.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+        <state relative-caret-position="110">
+          <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#66#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

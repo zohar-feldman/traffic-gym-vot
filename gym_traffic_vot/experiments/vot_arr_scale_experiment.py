@@ -27,10 +27,14 @@ def main(args):
     arg_parser = run.common_arg_parser()
     args, unknown_args = arg_parser.parse_known_args(args)
     extra_args = run.parse_cmdline_kwargs(unknown_args)
-    for a in np.arange(0.02, 0.17, 0.02):
+    # a_start = extra_args['a_start']
+    # a_end = extra_args['a_end']
+    # extra_args.pop('a_start')
+    # extra_args.pop('a_end')
+    for a in np.arange(0.14, 0.15, 0.02):
         for s in [1,2,4,8]:
-            save_path = '~/projects/traffic-gym-vot/models/vot_{}_{}_deepq'.format(a, s)
-            res_path = '~/projects/traffic-gym-vot/resutls/vot_{}_{}_deepq.txt'.format(a, s)
+            load_path = '~/projects/traffic-gym-vot/models/flow_{}_{}_deepq'.format(round(a, 2), round(s, 2))
+            res_path = '~/projects/traffic-gym-vot/resutls/vot_flow{}_{}_deepq.txt'.format(round(a, 2), round(s, 2))
             env_name = 'traffic-vot-simple-v0'
 
             env = gym.make(env_name, network='simple', arrival_rate=a, scale=s)
@@ -43,6 +47,7 @@ def main(args):
             print('Training {} on {} with arguments \n{}'.format(args.alg, env_name, extra_args))
 
             learn = run.get_learn_function(args.alg)
+            extra_args['load_path'] = load_path
             model = learn(
                 env=env,
                 seed=args.seed,
@@ -50,8 +55,8 @@ def main(args):
                 **extra_args
             )
 
-            save_path = osp.expanduser(save_path)
-            model.save(save_path)
+            # save_path = osp.expanduser(save_path)
+            # model.save(save_path)
 
             logger.log("Running trained model")
             obs = env.reset()
@@ -64,7 +69,7 @@ def main(args):
             dir_name = os.path.dirname(osp.expanduser(res_path))
             os.makedirs(dir_name, exist_ok=True)
             f = open(osp.expanduser(res_path), 'w+')
-            while True and len(episode_rewards) < 1000:
+            while True and len(episode_rewards) < 300:
                 if state is not None:
                     actions, _, state, _ = model.step(obs,S=state, M=dones)
                 else:
@@ -84,6 +89,8 @@ def main(args):
 
                         if ub - lb < abs(m * 0.02):
                             break
+                        else:
+                            f.write('Conf interval size is {}\n'.format(ub - lb))
                     obs = env.reset()
             m, std_err, lb, ub = sample_stats(episode_rewards, confidence)
             f.write('********************\n')

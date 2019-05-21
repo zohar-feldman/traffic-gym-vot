@@ -11,8 +11,8 @@ import math
 from gym_traffic_vot.envs.networks.simple.simple_network import SimpleTrafficNetwork
 
 class TrafficSocialEnv(TrafficVotEnv):
-    def __init__(self, load_path, network=SimpleTrafficNetwork(None, None), mode="gui", simulation_end=1000, sleep_between_restart=1, vots = None):
-        super(TrafficSocialEnv, self).__init__(mode=mode, network=network, simulation_end=simulation_end, vots=vots)
+    def __init__(self, load_path, network="simple", arrival_rate=None, scale=None, mode="gui", simulation_end=1000, sleep_between_restart=1, vots = None):
+        super(TrafficSocialEnv, self).__init__(mode=mode, network=network, simulation_end=simulation_end, vots=vots, arrival_rate=arrival_rate, scale=scale)
         self.sess = tf.Session()
         q_func = build_q_func('mlp')
         with tf.variable_scope('deepq_play', reuse=tf.AUTO_REUSE):
@@ -41,7 +41,7 @@ class TrafficSocialEnv(TrafficVotEnv):
         self.sess.run(restores)
 
     def reward(self):
-        sum_vot = super(TrafficSocialEnv, self).reward()
+        sum_vot = 0#super(TrafficSocialEnv, self).reward()
         sum_payments = 0
         v_curr = self.sess.run([self.v_t], {self.obs_t_input.get(): [self.curr_observation]})[0]
         for vehicle in self.last_step_loaded_vehicles:

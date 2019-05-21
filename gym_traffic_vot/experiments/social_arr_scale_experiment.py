@@ -31,13 +31,15 @@ def main(args):
     # a_end = extra_args['a_end']
     # extra_args.pop('a_start')
     # extra_args.pop('a_end')
-    for a in np.arange(0.14, 0.15, 0.02):
+    root = os.path.dirname(gym_traffic_vot.__file__)
+    root = os.path.dirname(root)
+    for a in np.arange(0.02, 0.15, 0.04):
         for s in [1,2,4,8]:
-            load_path = '~/projects/traffic-gym-vot/models/flow_{}_{}_deepq'.format(round(a, 2), round(s, 2))
-            res_path = '~/projects/traffic-gym-vot/resutls/vot_flow{}_{}_deepq.txt'.format(round(a, 2), round(s, 2))
-            env_name = 'traffic-vot-simple-v0'
+            load_path = os.path.join(root, 'models', 'vot_{}_{}_deepq'.format(round(a, 2), round(s, 2)))
+            res_path = os.path.join(root, 'results', 'social_{}_{}_deepq.txt'.format(round(a, 2), round(s, 2)))
+            env_name = 'traffic-social-simple-v0'
 
-            env = gym.make(env_name, network='simple', arrival_rate=a, scale=s)
+            env = gym.make(env_name, network='simple', arrival_rate=a, scale=s, load_path=load_path)
             if args.network:
                 extra_args['network'] = args.network
             else:
@@ -101,6 +103,7 @@ def main(args):
             f.close()
             env.close()
             tf.get_variable_scope().reuse_variables()
+
 
 if __name__ == '__main__':
     main(sys.argv)
